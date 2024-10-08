@@ -15,10 +15,9 @@ func WelcomeHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	fmt.Println("MongoDB API")
 	r := router.Router()
-	
-	fmt.Println("Server is getting started...")
 
 	r.HandleFunc("/", WelcomeHandler)
 
+	fmt.Println("Server started on http://localhost:4001")
 	log.Fatal(http.ListenAndServe(":4001", r))
 }
