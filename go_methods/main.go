@@ -6,14 +6,13 @@ func main() {
 	fmt.Println("Structs in golang")
 	// no inheritance in golang; No super or parent
 
-	pallav := User{"pallav", "pallav@go.dev", true, 16}
-	fmt.Println(pallav)
-	fmt.Printf("pallav details are: %+v\n", pallav)
-	fmt.Printf("Name is %v and email is %v.\n", pallav.Name, pallav.Email)
-	pallav.GetStatus()
-	pallav.NewMail()
-	fmt.Printf("Name is %v and email is %v.\n", pallav.Name, pallav.Email)
-
+	user := User{"pallav", "pallavps17@gmail.com", true, 16}
+	fmt.Println(user)
+	fmt.Printf("pallav details are: %+v\n", user)
+	fmt.Printf("Name is %v and email is %v.\n", user.Name, user.Email)
+	user.GetStatus()
+	user.NewMail()
+	fmt.Printf("Name is %v and email is %v.\n", user.Name, user.Email)
 }
 
 type User struct {
@@ -28,6 +27,6 @@ func (u User) GetStatus() {
 }
 
 func (u User) NewMail() {
-	u.Email = "test@go.dev"
+	u.Email = "test@gmail.com"
 	fmt.Println("Email of this user is: ", u.Email)
 }
